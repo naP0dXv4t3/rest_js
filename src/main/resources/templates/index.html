@@ -1,11 +1,105 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html lang="en">
 <head>
-    <title>Spring Security Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комунальные Услуги</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Oswald:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Welcome to Index PAGE!</h1>
+<header class="header">
+    <div class="container row">
+        <div class="logo">
+            <button class="ham-button">
+                <span class="ham-lines"></span>
+            </button>
 
+            <h1 class="main-title">КОМУНАЛЬНЫЕ УСЛУГИ</h1>
+        </div>
 
+        <div class="nav row">
+            <ul class="nav-list nav-list-main">
+                <li class="list-item"><a href="index.html" class="list-link" target="_blank">НОВОСТИ</a></li>
+
+                <li class="list-item"><a href="contacts.html" class="list-link" target="_blank">КОНТАКТЫ</a></li>
+
+                <li class="list-item"><a href="/login" class="list-link" target="_blank">ВОЙТИ</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <div class="container">
+        <div class="main-row">
+            <ol class="main-first-section">
+                <h2>НОВОСТИ</h2>
+
+                <h3>
+                    <li>
+                        В РОССИИ ПРЕДЛОЖИЛИ ОТКАЗАТЬСЯ ОТ БУМАЖНЫЙХ ПЛАТЕЖЕК ЗА ЖКУ
+                    </li>
+                </h3>
+
+                <p>
+                    Электронные платежки за ЖКУ распростронят на всю страну россияне смогут отказаться от бумажного варианта, наптмав соответствующее заявление.
+                </p>
+
+                <h3>
+                    <li>
+                        ЭКСПЕРТ ПРЕДУПРЕДИЛА О ВОЗМЖНОМ ПОЯВЛЕНИИ НОВОЙ ГРАФЫ В КВИТАНЦИИ ЖКХ
+                    </li>
+                </h3>
+                <p>
+                    Депутаты Госдум (ГД) РФ выступили с предложением в обязательном порядке устанавливать в многоквартирных домах сигнализаторы утечек газа, что может отразиться на стоимости коммунальных платежей.
+                </p>
+            </ol>
+            <div class="main-second-section grid">
+                <div class="main-col col grid-span-2">
+                    <h2>Break it down</h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="main-col col grid-span-2">
+                    <h2>Work your way up</h2>
+
+                    <p>
+                        Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer container">
+    <h2>О нашей компании</h2>
+
+    <div class="row">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur molestias exercitationem minima dolorem nemo inventore sint asperiores, voluptas praesentium, sit ducimus repellendus adipisci, porro possimus necessitatibus modi repudiandae magnam natus? Dolore, quidem voluptatum odit excepturi rem ut alias aperiam nobis vel, neque officia praesentium dolores repellat aliquid aut reprehenderit molestiae!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure architecto ipsa, consequatur ipsam est nobis vero eligendi, voluptate quam soluta dolores. Minima ducimus odit, repellendus hic, doloribus possimus impedit quod eaque temporibus nam odio. Ea corrupti sit harum iste minima, dicta facere delectus animi voluptatum consectetur, amet dolore esse.
+        </p>
+    </div>
+</footer>
 </body>
 </html>

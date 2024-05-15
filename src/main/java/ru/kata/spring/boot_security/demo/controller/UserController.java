@@ -27,26 +27,21 @@ public class  UserController {
     @GetMapping(value = "/users")
     public ResponseEntity<List<User>> getUserList() {
         List<User> userList = userService.getAllUsers();
-        return userList == null && userList.isEmpty() ?
-                new ResponseEntity<>(userList, HttpStatus.NOT_FOUND) :
-                new ResponseEntity<>(userList, HttpStatus.OK);
+        return new ResponseEntity<>(userList, HttpStatus.OK);
     }
 
     @GetMapping(value = "/roles")
     public ResponseEntity<Set<Role>> getRolesList() {
         Set<Role> roleSet = roleService.getAllRoles();
-        return roleSet == null && roleSet.isEmpty() ?
-                new ResponseEntity<>(roleSet, HttpStatus.NOT_FOUND) :
-                new ResponseEntity<>(roleSet, HttpStatus.OK);
+        return new ResponseEntity<>(roleSet, HttpStatus.OK);
     }
 
 
     @GetMapping("/user/{id}")
     public ResponseEntity<User> getUser(@PathVariable long id) {
         final User user = userService.getUserById(id);
-        return user != null
-                ? new ResponseEntity<>(user, HttpStatus.OK)
-                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+
     }
 
     @PostMapping(value = "/add")

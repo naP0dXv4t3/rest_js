@@ -15,13 +15,16 @@ fetch('/user-data')
             document.getElementById("adminContent").remove();
             document.getElementById("admin").remove();
             document.getElementById("modalsWindow").remove();
+            document.getElementById("adminRequest").remove()
             document.getElementById("user-tab").classList.add("active");
             document.getElementById("user").classList.add("show", "active");
         } else {
             getUserList();
+            document.getElementById("userRequest").remove();
             document.getElementById("admin-tab").classList.add("active");
             document.getElementById("admin").classList.add("show", "active");
         }
+
         const tableBody = document.getElementById("userData");
 
         let row = tableBody.insertRow();

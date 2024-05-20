@@ -2,6 +2,7 @@ const requestForm = document.forms.namedItem("requestForm");
 requestForm.addEventListener("submit", add);
 
 function add(e) {
+    e.preventDefault();
     fetch('/addMessage', {
         method: 'POST',
         headers: {
@@ -12,8 +13,10 @@ function add(e) {
             messageText: requestForm.elements.namedItem("messageText").value
         })
     }).then( r=>{
+        if (!r.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return r.json();
+    })
 
-
-
-    } )
 }

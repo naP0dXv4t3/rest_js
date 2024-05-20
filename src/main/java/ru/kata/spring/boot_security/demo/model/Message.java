@@ -1,5 +1,6 @@
 package ru.kata.spring.boot_security.demo.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,11 +10,11 @@ import javax.persistence.Table;
 public class Message {
     @Id
     private Long id;
-
+    @Column(name = "senderEmail")
     private String senderEmail;
-
+    @Column(name = "senderContact")
     private String senderContact;
-
+    @Column(name = "messageText")
     private String messageText;
 
     public Message(){
